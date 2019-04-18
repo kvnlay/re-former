@@ -1,24 +1,8 @@
-# README
+### A project about forms
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In this project, we learn how to use form helpers in ROR
 
-Things you may want to cover:
+### Developed by
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[Musa Jabbaaru Ntege](https://github.com/Cena-JM)<br>
+[Kingsley Omotayo](https://github.com/kvnlay)
