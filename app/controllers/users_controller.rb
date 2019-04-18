@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# User Controller
 class UsersController < ApplicationController
   def new
     @user = User.new
@@ -5,7 +8,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-  
+
     if @user.save
       redirect_to new_user_path
     else
@@ -15,7 +18,6 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
-    
   end
 
   def update
@@ -30,6 +32,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username,:email,:password)
+    params.require(:user).permit(:username, :email, :password)
   end
 end

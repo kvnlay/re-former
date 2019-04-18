@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# User
 class User < ApplicationRecord
   validates :username, presence: true
   validates :email, presence: true
