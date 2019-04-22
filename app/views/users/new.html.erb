@@ -1,0 +1,45 @@
+<!--- <form action="/users" method="post" accept-charset="UTF-8" >
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <label for = "username">User name:</label>
+  <input id = "username" type="text" name="user[username]"><br>
+  <label for = "email">Email:</label>
+  <input id = "email" type="email" name="user[email]"><br>
+  <label for = "password">Password:</label>
+  <input id = "password" type="password" name="user[password]"><br>
+  <input type="submit" value="Submit">
+</form> --->
+
+<!--- <%= form_tag('/users') do%>
+  <%= label_tag :username, 'User name:' %>
+  <%= text_field_tag :username%>
+  <%= label_tag :email, 'email:' %>
+  <%= email_field_tag :email%>
+  <%= label_tag :password, 'password:' %>
+  <%= password_field_tag :password%>
+  <%= submit_tag ('submit')%>
+<%end%> --->
+
+<%= form_for @user do |f|%>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <div class="alert alert-danger">
+        The form contains <%= pluralize(@user.errors.count, "error") %>.
+      </div>
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= f.label(:username, 'your user name here') %>
+  <%= f.text_field(:username, value:'King Musa')%>
+  <br>
+  <%= f.label(:email, 'Your email') %>
+  <%= f.email_field(:email, placeholder: 'example@example.com') %>
+  <br>
+  <%= f.label(:password, 'Your password') %>
+  <%= f.password_field(:password) %>
+
+  <%= f.submit %>
+<%end%>
